@@ -1,0 +1,34 @@
+{
+  "name": "coiffure",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "photos": {
+      "type": "hasMany",
+      "model": "photo",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "files": {
+      "type": "hasMany",
+      "model": "files",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

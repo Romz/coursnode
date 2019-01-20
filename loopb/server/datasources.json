@@ -1,0 +1,20 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "api",
+    "password": "",
+    "name": "db",
+    "user": "mongodb",
+    "connector": "mongodb"
+  },
+  "photos": {
+    "name": "photos",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "media",
+    "nameConflict": "makeUnique",
+    "maxFileSize": "52428800"
+  }
+}

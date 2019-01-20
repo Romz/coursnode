@@ -1,0 +1,29 @@
+{
+  "name": "files",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "coiffure": {
+      "type": "belongsTo",
+      "model": "coiffure",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

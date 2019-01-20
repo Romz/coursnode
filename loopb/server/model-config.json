@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Account",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Account": {
+    "dataSource": "db",
+    "public": true
+  },
+  "test": {
+    "dataSource": "db",
+    "public": true
+  },
+  "photo": {
+    "dataSource": "photos",
+    "public": true
+  },
+  "coiffure": {
+    "dataSource": "db",
+    "public": true
+  },
+  "container": {
+    "dataSource": "photos",
+    "public": true
+  },
+  "files": {
+    "dataSource": "db",
+    "public": true
+  }
+}
